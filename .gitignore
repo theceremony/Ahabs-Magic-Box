@@ -39,4 +39,10 @@ Thumbs.db
 **/temp
 **/Temp/**
 **/temp/**
-
+Library
+Temp
+*.csproj
+*.pidb
+*.unityproj
+*.sln
+*.userprefs
