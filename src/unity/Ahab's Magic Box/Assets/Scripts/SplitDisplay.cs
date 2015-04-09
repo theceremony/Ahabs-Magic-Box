@@ -21,7 +21,7 @@ public class SplitDisplay : MonoBehaviour {
 		cam3.transform.position = new Vector3(0, CAM_Y, CAM_Z_INC * 2);
 		cam1.farClipPlane = CAM_Z_INC + CAM_CLIP_OVERLAP;
 		cam2.farClipPlane = CAM_Z_INC + CAM_CLIP_OVERLAP;
-		cam3.farClipPlane = CAM_Z_INC + CAM_CLIP_OVERLAP;
+		cam3.farClipPlane = CAM_Z_INC + CAM_CLIP_OVERLAP + 600;
 	}
 	
 	// Update is called once per frame
@@ -30,8 +30,9 @@ public class SplitDisplay : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		GUI.DrawTexture(new Rect(0, 0, 256, 256), camTexture1, ScaleMode.StretchToFill, true, 0);
-		GUI.DrawTexture(new Rect(256, 0, 256, 256), camTexture2, ScaleMode.StretchToFill, true, 0);
-		GUI.DrawTexture(new Rect(512, 0, 256, 256), camTexture3, ScaleMode.StretchToFill, true, 0);
+		float thirdScreenHieght = Screen.height / 3;
+		GUI.DrawTexture(new Rect(0, thirdScreenHieght *2, Screen.width, thirdScreenHieght), camTexture1, ScaleMode.ScaleAndCrop, true, 0);
+		GUI.DrawTexture(new Rect(0, thirdScreenHieght, Screen.width, thirdScreenHieght), camTexture2, ScaleMode.ScaleAndCrop, true, 0);
+		GUI.DrawTexture(new Rect(0, 0, Screen.width, thirdScreenHieght), camTexture3, ScaleMode.ScaleAndCrop, true, 0);
 	}
 }

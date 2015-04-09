@@ -13,8 +13,8 @@ public class Shooter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		sphere.transform.position = sphere.transform.position + new Vector3 (0, 0, .8f);
-		if (sphere.transform.position.z > 150) {
+		sphere.transform.position = sphere.transform.position + new Vector3 (0, 0, .2f);
+		if (sphere.transform.position.z > 100) {
 			sphere.transform.position = Vector3.zero;
 		}
 	}
