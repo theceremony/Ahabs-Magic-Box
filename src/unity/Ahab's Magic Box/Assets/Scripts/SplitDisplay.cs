@@ -12,10 +12,9 @@ public class SplitDisplay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("start");
-		cam1.transform.position.Set (0, 0, 0);
-		cam2.transform.position.Set (0, 0, -300);
-		cam3.transform.position.Set (0, 0, -600);
+		cam1.transform.position = new Vector3(0, 0, 0);
+		cam2.transform.position = new Vector3(0, 0, 300);
+		cam3.transform.position = new Vector3(0, 0, 600);
 	}
 	
 	// Update is called once per frame
