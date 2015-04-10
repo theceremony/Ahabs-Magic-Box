@@ -50,6 +50,10 @@ public class SplitDisplay : MonoBehaviour {
 				GUI.DrawTexture (new Rect (0, thirdScreenHieght, Screen.width, thirdScreenHieght), camTexture2, ScaleMode.ScaleAndCrop, true, 0);
 				GUI.DrawTexture (new Rect (0, thirdScreenHieght * 2, Screen.width, thirdScreenHieght), camTexture3, ScaleMode.ScaleAndCrop, true, 0);
 			}
+			GUI.Box(new Rect(0, thirdScreenHieght, Screen.width, 1),"");
+			GUI.Box(new Rect(0, thirdScreenHieght *2, Screen.width, 1),"");
 		}
 	}
+
+
 }
